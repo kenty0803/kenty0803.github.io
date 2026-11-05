@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プライバシーポリシー | ScreenshotCalendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap bar-inner">
+      <a class="brand" href="index.html">ScreenshotCalendar</a>
+      <nav aria-label="サイト案内">
+        <a href="privacy.html" aria-current="page">プライバシーポリシー</a>
+        <a href="terms.html">利用規約</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap document">
+    <h1>プライバシーポリシー</h1>
+    <p class="lead">個人用Windowsアプリ ScreenshotCalendar と、この案内サイトでのデータの取り扱いを説明します。</p>
+
+    <h2>画像の読み取り</h2>
+    <p>アプリは設定された監視フォルダの画像を読み込み、WindowsのOCRで端末上で文字を認識します。予定名・日時・場所・会議URL・備考など、画像に含まれる予定情報を抽出します。元画像はアプリが削除せず、元のフォルダに残ります。監視フォルダがOneDriveなどの同期対象であれば、画像の同期はそのサービスの設定に従います。</p>
+
+    <h2>Google カレンダー</h2>
+    <p>Googleの同意画面で許可された権限を使い、設定したカレンダーを対象に次の操作を行います。</p>
+    <dl>
+      <dt><code>calendar.events.owned</code></dt>
+      <dd>本人が所有するカレンダーの予定を読み取り、重複や変更・キャンセルの対象を照合します。予定の作成・更新・削除に使います。予定にはタイトルや日時のほか、抽出できた場所、会議URL、備考や、管理用の情報が含まれる場合があります。</dd>
+      <dt><code>calendar.calendars.readonly</code></dt>
+      <dd>接続先を確認するため、カレンダーのIDや表示名などの情報を読み取ります。</dd>
+    </dl>
+    <p>Google APIから受け取った情報は、予定の照合、操作結果の確認、履歴と復元、設定された通知のために使用します。招待者がいる予定の変更や削除を運用者が承認した場合、Google カレンダーから招待者に通知が届くことがあります。広告やデータ販売には使用しません。Google APIから受け取った情報の使用と他のサービスへの転送は、Limited Use要件を含む <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> に従います。</p>
+
+    <h2>KEEPERによる補助解析</h2>
+    <p>ローカルの解析だけでは判断が難しく、KEEPER連携が有効な場合は、OCRテキスト、予定候補、確認事項、基準日・タイムゾーンなどをHermesのKEEPER経由で設定されたAIプロバイダーに送ります。この運用ではOpenAIを使用し、画像添付は無効です。OCRテキストに画像内の個人情報が含まれる場合があります。KEEPERへの入力に、Google Calendar APIから取得した予定やOAuthトークン、既存の会話履歴は含めません。予定の操作はWindowsアプリが行います。</p>
+
+    <h2>Discordへの処理結果通知</h2>
+    <p>運用者が通知先と送信内容に同意してDiscord通知を設定した場合、アプリはDiscord APIを通じて指定のスレッドに処理結果を投稿します。投稿には予定名、日時、結果、必要な確認事項が含まれる場合があります。成功通知の予定名には、Google カレンダーの操作前後の記録から取得したタイトルが使われる場合があります。画像、OCR全文、予定の本文、OAuthトークンは通知に含めません。投稿はスレッドを閲覧できるメンバーから見えます。通知の送信にAIは使いません。</p>
+
+    <h2>端末に残るデータ</h2>
+    <p>Windowsユーザーごとのアプリデータ領域に、設定、画像のファイルパスとハッシュ、OCR結果、補助解析の入出力、処理履歴、変更前後の予定、ログ、Discordの送信待ちと送信記録を保存します。OAuthトークンはWindowsのDPAPIで暗号化して保存し、接続とアクセストークンの更新に使います。処理履歴に一律の自動削除期限は設定されていません。</p>
+
+    <h2>連携の解除とデータの削除</h2>
+    <p>Googleとの接続は<a href="https://myaccount.google.com/connections">Google アカウントの接続管理</a>から解除できます。解除後も、端末の履歴、元画像、登録済み予定、Discordの投稿はそれぞれの保存先に残ります。運用者はアプリを停止したうえでローカルデータを管理し、登録済み予定や通知はGoogle カレンダーやDiscord側で削除できます。KEEPERに送信済みのデータには、使用したAIプロバイダーの設定と取り扱いが適用されます。</p>
+
+    <h2>この案内サイト</h2>
+    <p>このサイトは静的な案内ページです。アプリの画像、予定、OAuth認証情報を受け取るフォームや、アクセス解析用のスクリプトは設置していません。配信元のホスティング事業者が、サイトの配信やセキュリティのためにアクセス情報を処理する場合があります。</p>
+  </main>
+  <footer class="wrap footer"><a href="index.html">ScreenshotCalendar トップへ</a></footer>
+</body>
+</html>

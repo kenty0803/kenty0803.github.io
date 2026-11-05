@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ScreenshotCalendarは、スクリーンショットから予定を読み取り、Google カレンダーに反映する個人用のWindowsアプリです。">
+  <title>ScreenshotCalendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap bar-inner">
+      <a class="brand" href="index.html" aria-current="page">ScreenshotCalendar</a>
+      <nav aria-label="サイト案内">
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="terms.html">利用規約</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">個人用 Windows アプリ</p>
+      <h1 id="title">ScreenshotCalendar</h1>
+      <p class="lead">スクリーンショットから予定を読み取り、Google カレンダーへ。</p>
+      <p>指定したフォルダに入れた画像から予定名や日時を抽出し、設定したカレンダーに反映します。自分の予定を管理するためのアプリです。一般向けの登録や配布は行っていません。</p>
+    </section>
+    <section class="panel" aria-labelledby="flow">
+      <h2 id="flow">予定を反映するまで</h2>
+      <ol>
+        <li>Windowsの文字認識で画像を読み取り、日時と予定の対応をローカルで判定します。</li>
+        <li>ローカルで判断が難しいときは、設定済みのKEEPERに補助解析を依頼します。確定できない操作は確認待ちにします。</li>
+        <li>Google カレンダーで重複や変更対象を確認し、予定を登録・変更・削除します。Discord通知を設定している場合は、処理結果を指定スレッドに送ります。</li>
+      </ol>
+    </section>
+    <section class="panel" aria-labelledby="access">
+      <h2 id="access">Google アカウントの権限を使う理由</h2>
+      <p>本人が所有するカレンダーの予定を照合・登録・変更・削除し、接続先を識別するためにカレンダー情報を読み取ります。権限の範囲、データの保存先、外部への送信内容は<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+    </section>
+  </main>
+  <footer class="wrap footer">ScreenshotCalendar · アプリ紹介</footer>
+</body>
+</html>
